@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="Script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: gray;">
+<div class="container">
+<br>
+	<div class="line-cross2" id="divParentContainer">
+	<span style="height: 92px; padding-top: 10px; top: 24px; background: gray;"><div id="divChildContainer">
+	<h2 style="color: white;">Enter Patient Details</h2>
+	</div></span>
+	</div>
+	<br>
+	<br>
+	<table style="background:black;" class="table table-bordered">
+	<tr>
+		<th style="text-align: center; color: white;">Attribute</th>
+		<th style="text-align: center; color: white;">Value</th>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>First Name: </strong></span></td>
+		<td><input id="firstName" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Surname: </strong></span></td>
+		<td><input id="Surname" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>House Number: </strong></span></td>
+		<td><input id="houseNumber" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Address(Street): </strong></span></td>
+		<td><input id="Address" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Address(City): </strong></span></td>
+		<td><input id="Address_City" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><Strong>PostCode: </strong></span></td>
+		<td><input id="postCode" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>NHS Number: </strong></span></td>
+		<td><input id="nhsNumber" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><Strong>Landline: </strong></span></td>
+		<td><input id="landLine" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><Strong>Mobile: </strong></span></td>
+		<td><input id="mobile" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><Strong>Email Address: </strong></span></td>
+		<td><input id="emailAddress" style="width: 100%" type="email"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><div style="width: 100%; height: 100%;display: flex; justify-content: center;">
+      <button style="width: 176px; display: flex; padding-left: 66px;" type="button" class="btn btn-success" onclick="submitData();">Submit</button>
+    </div>
+  </td>
+
+	</tr>
+	</table>
+</div>
+
+<div class="container">
+<br>
+	<div class="line-cross2" id="divParentContainer">
+	<span style="height: 92px; padding-top: 10px; top: 24px; background: gray;"><div id="divChildContainer">
+	<h2 style="color: white;">Enter Patient Details</h2>
+	</div></span>
+	</div>
+	<br>
+	<br>
+	<table style="background:black;" class="table table-bordered">
+	<tr>
+		<th style="text-align: center; color: white;">Name Of Medication</th>
+		<th style="text-align: center; color: white;">Strength Of Medication</th>
+		<th style="text-align: center; color: white;">Quantity Of Medication</th>
+		<th style="text-align: center; color: white;">Use Of Direction</th>
+		<th style="text-align: center; color: white;">Last Amended</th>
+		
+		
+	</tr>
+	</table>
+</div>
+
+<div class="container">
+<br>
+	<div class="line-cross2" id="divParentContainer">
+	<span style="height: 92px; padding-top: 10px; top: 24px; background: gray;"><div id="divChildContainer">
+	<h2 style="color: white;">Enter Patient Details</h2>
+	</div></span>
+	</div>
+	<br>
+	<br>
+	<table style="background:black;" class="table table-bordered">
+	<tr>
+		<th style="text-align: center; color: white;">Attribute</th>
+		<th style="text-align: center; color: white;">Value</th>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Name Of Medication: </strong></span></td>
+		<td><input id="NameOfMedication" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Strength: </strong></span></td>
+		<td><input id="Strength" style="width: 100%" onkeypress="validate(event);" type="text"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Total Quantity: </strong></span></td>
+		<td><input id="Quantity" style="width: 100%" type="text" onkeypress="validate(event);"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Duration: </strong></span></td>
+		<td><select id="Duration" name="duration">
+		<option value="Second">Second</option>
+		<option value="Minute">Minute</option>
+		<option value="Hour">Hour</option>
+		<option value="Day">Day</option>
+		<option value="Month">Month</option>
+		<option value="Year">Year</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Number Of Units Per Duration: </strong></span></td>
+		<td><input id="UnitsPerDuration" style="width: 100%" type="text" onkeypress="validate(event);"></td>
+	</tr>
+	<tr>
+		<td class="line-cross"><span><strong>Measurement of Units: </strong></span></td>
+		<td><input id="UnitsOfMeasurements" style="width: 100%" type="text"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><div style="width: 100%; height: 100%;display: flex; justify-content: center;">
+      <button style="width: 176px; display: flex; padding-left: 66px;" type="button" class="btn btn-success" onclick="submitData()">Submit</button>
+    </div>
+  </td>
+
+	</tr>
+	</table>
+</div>
+</body>
+
+</html>

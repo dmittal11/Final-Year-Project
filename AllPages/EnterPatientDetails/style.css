@@ -1,0 +1,85 @@
+.line-cross {
+  font: 20px;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif, Arial;
+}
+.line-cross {
+  position: relative;
+  z-index: 1;
+}
+.line-cross:before {
+  border-top: 1px solid #dfdfdf;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 41%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+
+
+
+
+.line-cross span {
+  background: #fff;
+  padding: 1px 15px;
+  border-radius: 20px;
+}
+
+.line-cross2 {
+  font: 20px;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif, Arial;
+}
+.line-cross2 {
+  position: relative;
+  z-index: 1;
+}
+.line-cross2:before {
+  border-top: 1px solid #dfdfdf;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+
+.line-cross2 span {
+  background: #fff;
+  padding: 0 15px;
+  border-radius: 20px;
+}
+
+#divParentContainer {
+	
+	width: 1139px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	background: gray;
+}
+
+#divChildContainer {
+	
+	width: 364px;
+	height: 100px;
+	display: flex;
+	
+	
+}
+
+
+
+
+
